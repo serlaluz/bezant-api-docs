@@ -55,6 +55,7 @@ skey|string|Y|User Secret|"skey": "test1234"
 json key|타입|필수 여부|설명|예제
 ---|:---:|:---:|:---:|---
 enrollmentID|string|Y|wallet 주소|"enrollmentID": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
+</br>
 
 #### Wallet Password 변경 API
 
@@ -70,6 +71,7 @@ Method|PUT
 구분| |
 :---:|:---:
 Content-Type|application/json
+</br>
 
 #### Chaincode Query API
 
@@ -85,6 +87,7 @@ Method|POST
 구분| |
 :---:|:---:
 Content-Type|application/json
+</br>
 
 #### Chaincode Invoke API
 
@@ -100,13 +103,14 @@ Method|POST
 구분| |
 :---:|:---:
 Content-Type|application/json
+</br>
 
 ## BRC20 토큰형 모델의 스펙 정의
 
 function|사용 API|address|skey|args|타입|args example
 ---|---|---|---|---|---|---
 init|Invoke API|chaincode owner address|chaincode owner skey|name|json|{
-
+</br>
 
 ## 응답 코드 정의
 
