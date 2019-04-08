@@ -31,14 +31,14 @@ message|Request 에 대한 Response data 입니다.</br>Json 포멧으로 내려
 ## Wallet 생성 API
 * 기본 정보
 
-구분| 
+구분| |
 :---:|:---:
 URL Path|/blockchain/v1/wallet
 Method|POST
 
 - Header 정보
 
-구분| 
+구분| |
 :---:|:---:
 Content-Type|application/json
 
