@@ -1,4 +1,6 @@
 # Bezant Rest API Documentation
+* Version: 1.0
+* Last Updated: 2019. 4. 8.
 
 ## API 서버 사용 기본 정책
 * API 서버를 사용하기 위해서는 사전에 IP List 등록을 해야한다.
