@@ -30,7 +30,7 @@ message|Request 에 대한 Response data 입니다.</br>Json 포멧으로 내려
 
 ## Public Rest API
 
-#### Wallet 생성 API
+### 1. Wallet 생성 API
 * 기본 정보
 
 구분| |
@@ -57,7 +57,7 @@ json key|타입|필수 여부|설명|예제
 enrollmentID|string|Y|wallet 주소|"enrollmentID": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
 </br>
 
-#### Wallet Password 변경 API
+### 2. Wallet Password 변경 API
 
 * 기본 정보
 
@@ -73,7 +73,7 @@ Method|PUT
 Content-Type|application/json
 </br>
 
-#### Chaincode Query API
+### 3. Chaincode Query API
 
 * 기본 정보
 
@@ -89,7 +89,7 @@ Method|POST
 Content-Type|application/json
 </br>
 
-#### Chaincode Invoke API
+### 4. Chaincode Invoke API
 
 * 기본 정보
 
