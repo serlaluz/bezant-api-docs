@@ -103,8 +103,8 @@ Content-Type|application/json
 
 ## BRC20 토큰형 모델의 스펙 정의
 
-function|사용 API|address|skey|args|타입|args|example
----|---|---|---|---|---|---|---
+function|사용 API|address|skey|args|타입|args example
+---|---|---|---|---|---|---
 init|Invoke API|chaincode owner address|chaincode owner skey|name|json|{
 
 
