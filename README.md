@@ -26,7 +26,7 @@
 |:---:|---|
 |code|response 의 내부코드입니다.</br>"0000" 일 경우 정상처리입니다.</br>Exception 이 발생하면 Exception 에 대한 내부 코드로 셋팅 됩니다. 내부 코드는 ( 가이드 문서 4. 내부 응답 코드 정의 ) 를 참고하시면 됩니다.|
 |message|Request 에 대한 Response data 입니다.</br>Json 포멧으로 내려가며 Exception 발생시 Exception Message 가 String 포멧으로 내려갑니다.|
-
+</br>
 
 ### Wallet 생성 API
 - 기본 정보
