@@ -57,7 +57,7 @@ skey|string|Y|User Secret|"skey": "test1234"
 
 json key|타입|필수 여부|설명|예제
 ---|:---:|:---:|:---:|---
-enrollmentID|string|Y|wallet 주소|"enrollmentID": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
+enrollmentId|string|Y|wallet 주소|"enrollmentId": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
 </br>
 
 ### 2. Wallet Password 변경 API
