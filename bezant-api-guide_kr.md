@@ -155,7 +155,7 @@ http status code|내부 code|message|설명
 400|7004|Resource was not found.|리소스를 찾을 수 없습니다.
 400|7005|ApiKey is not valid or has expired.|API Key 가 유효하지 않거나 파기되었습니다.
 404|7006|Request API Path is unclear.|API 요청 URL 이 정확하지 않습니다. 존재하지 않습니다.
-400|7007|Required Parameter does not exist.	해당 요청에 필수 파라미터가 존재하지 않습니다.
+400|7007|Required Parameter does not exist.|해당 요청에 필수 파라미터가 존재하지 않습니다.
 403|7008|Service Contract does not exist.|서비스 계약 정보가 존재하지 않습니다.
 403|7009|Went over the App Rate Limit. Try again later.|허용 가능한 호출수가 넘었습니다.
 403|7010|IP Address is not permitted. Please check the IP address.|해당 IP 는 허용되지 않습니다. IP 를 체크하세요.
