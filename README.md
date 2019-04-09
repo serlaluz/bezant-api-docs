@@ -102,7 +102,7 @@ Content-Type|application/json
 * Request Body(json)
 
 json key|타입|필수 여부|설명|예제
----|:---:|:---:|:---:|---
+---|:---:|:---:|---|---
 function|string|Y|개발자가 개발한 function name</br>(BRC20 스펙 정의 참고)|"function": "get_balance"
 address|string|Y|호출시 사용할 address(=enrollmentId)|"address": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
 skey|string|Y|User Secret|"skey": "test1234"
@@ -127,7 +127,7 @@ Content-Type|application/json
 * Request Body(json)
 
 json key|타입|필수 여부|설명|예제
----|:---:|:---:|:---:|---
+---|:---:|:---:|---|---
 function|string|Y|개발자가 개발한 function name</br>(BRC20 스펙 정의 참고)|"function": "transfer"
 address|string|Y|호출시 사용할 address(=enrollmentId)|"address": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
 skey|string|Y|User Secret|"skey": "test1234"
