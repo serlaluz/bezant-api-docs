@@ -163,9 +163,13 @@ http status code|내부 code|message|설명
 503|7101|Internal Server Error. Proxy server is exhausted.|서버가 과부하 상태입니다.
 504|7102|Internal Server Error. Outbound Service is unstable.|서비스가 안정적이지 않은 상태입니다.
 400|2001|InvalidSymmetricKeyException|skey 가 유효하지 않습니다.
-500|2101|Failed to send transaction to orderer.|transaction 이 오더러에 보내지지 않았습니다.
-400|2003|Transaction proposal in not valid.|transaction proposal 이 유효하지 않습니다.
 400|2002|Address({info}) is not valid.|유효하지 않은 address 값입니다.
+400|2003|Transaction proposal in not valid.|transaction proposal 이 유효하지 않습니다.
+400|2006|User {id} is not enrolled yet. Please check.|등록되지 않은 되지 않은 address입니다.
+400|2007|OrgName {orgname} is not valid. The orgName does not have permission to call.|잘못된 채널로 요청하였습니다.
+500|2100|Failed to enroll.|Enroll 요청 실패되었습니다.
+500|2101|Failed to send transaction to orderer.|Proposal 성공했으나 Orderer 에 Transaction 요청이 실패되었습니다.
 500|2102|Failed to invoke chaincode.|체인코드에 invoke 가 실패하였습니다.
 500|2103|Failed to query chaincode.|체인코드에 query 가 실패하였습니다.
 500|2104|Can't find chaincode ({ chaincodeName }) Please check.|해당 체인코드를 찾을 수 없습니다.
+500|2105|Can't find channel {channelName}. Please check.|해당 Channel을 찾을 수 없습니다.
