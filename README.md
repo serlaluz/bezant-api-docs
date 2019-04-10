@@ -4,4 +4,4 @@
 
 ### Language
 * [Korean](bezant-api-guide_kr.md)
-* English
+* [English](bezant-api-guide_en.md)
