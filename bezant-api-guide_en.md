@@ -139,7 +139,7 @@ args|array|Y| These are the required arguments to call a function|"args": ["bznt
 
 * This is the API to invoke a chaincode.
 
-Category
+Category| |
 :---:|---
 URL Path|/blockchain/v1/{channelName}/chaincodes/{chaincodeName}/invoke
 Method|POST
