@@ -173,11 +173,24 @@ allowance|Invoke API|any|any|owner</br>spender|string(like json)
 
 #### curl example
 ``` javascript
-// BRC20 - BalanceOf
-curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "balanceOf", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "1234qwer", "args": ["{\"who\": \"bznt0x69186ddF37cC536605F78A1207f739481a1461e7\"}"]}' https://testnet-apis.bezant.io/blockchain/v1/bezant-channel/chaincodes/bezant-token/query
+// BRC20 - Init
+curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "init", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "test1234", "args": ["{\"name\": \"sample-token\", \"symbol\": \"SAMPLE\", \"totalSupply\": \"10000000\", \"decimals\": 5, \"contractType\": \"BRC20\"}"]}' https://testnet-apis.bezant.io/blockchain/v1/{channelName}/chaincodes/{chaincodeName}/invoke
+
+// BRC20 - Transfer
+curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "transfer", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "test1234", "args": ["[{\"to\": \"bznt0xe8acb79d2847D724fF1aE48055E14CF99D502fe3\", \"amount\": \"10\"}, {\"to\": \"bznt0xB5380818073349b06174a762363A0A2846EE2a42\", \"amount\": \"20\"}]"]}' https://testnet-apis.bezant.io/blockchain/v1/{channelName}/chaincodes/{chaincodeName}/invoke
+
+// BRC20 - TransferFrom
+curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "transferFrom", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "test1234", "args": ["{\"to\": \"bznt0xe8acb79d2847D724fF1aE48055E14CF99D502fe3\", \"amount\": \"10\"}"]}' https://testnet-apis.bezant.io/blockchain/v1/{channelName}/chaincodes/{chaincodeName}/invoke
 
 // BRC20 - TotalSupply
-curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "totalSupply", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "1234qwer", "args": []}' https://testnet-apis.bezant.io/blockchain/v1/bezant-channel/chaincodes/bezant-token/query
+curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "totalSupply", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "test1234", "args": []}' https://testnet-apis.bezant.io/blockchain/v1/{channelName}/chaincodes/{chaincodeName}/query
+
+// BRC20 - BalanceOf
+curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "balanceOf", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "test1234", "args": ["{\"who\": \"bznt0x69186ddF37cC536605F78A1207f739481a1461e7\"}"]}' https://testnet-apis.bezant.io/blockchain/v1/{channelName}/chaincodes/{chaincodeName}/query
+
+// BRC20 - Allowance
+curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "allowance", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "test1234", "args": ["{\"owner\": \"bznt0x69186ddF37cC536605F78A1207f739481a1461e7\", \"spender\": \"bznt0x69186ddF37cC536605F78A1207f739481a1461e7\"}"]}' https://testnet-apis.bezant.io/blockchain/v1/{channelName}/chaincodes/{chaincodeName}/query
+
 ```
 
 ## 응답 코드 정의
