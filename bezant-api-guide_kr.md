@@ -89,7 +89,7 @@ Content-Type|application/json
 
 json key|타입|필수 여부|설명|예제
 ---|:---:|:---:|:---:|---
-enrollmentId|string|Y|wallet 주소|"enrollmentId": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
+address|string|Y|wallet 주소|"address": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
 skey|string|Y|User Secret|"skey": "test1234"
 newSkey|string|Y|User Secret|"newSkey": "newtest1234"
 
@@ -169,7 +169,7 @@ transferFrom|Invoke API|invoker address|invoker address skey|from</br>to</br>amo
 approve|Invoke API|wallet owner address|wallet owner address|spender</br>amount|string(like json)
 totalSupply|Query API|requester address|requester skey|||
 balanceOf|Query API|requester address|requester skey|who|string(like json)
-allowance|Invoke API|any|any|owner</br>spender|string(like json)
+allowance|Invoke API|requester address|requester skey|owner</br>spender|string(like json)
 
 #### curl example
 ``` javascript
