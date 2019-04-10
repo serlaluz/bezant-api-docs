@@ -133,14 +133,21 @@ args|array|Y|function 호출 시 필요한 arguments|"args": ["bznt0x59aDD906d2E
 
 function|사용 API|address|skey|args|타입
 ---|---|---|---|---|---
-init|Invoke API|chaincode owner address|chaincode owner skey|name</br>symbol</br>totalSupply</br>decimals</br>contractType|json
-transfer|Invoke API|from address|from address skey|to</br>amount|json array
-transferFrom|Invoke API|invoker address|invoker address skey|from</br>to</br>amount|json
-approve|Invoke API|wallet owner address|wallet owner address|spender</br>amount|json
+init|Invoke API|chaincode owner address|chaincode owner skey|name</br>symbol</br>totalSupply</br>decimals</br>contractType|string(like json)
+transfer|Invoke API|from address|from address skey|to</br>amount|string(like json array)
+transferFrom|Invoke API|invoker address|invoker address skey|from</br>to</br>amount|string(like json)
+approve|Invoke API|wallet owner address|wallet owner address|spender</br>amount|string(like json)
 totalSupply|Query API|any|any|||
-balanceOf|Query API|any|any|who|json
-allowance|Invoke API|any?|any?|owner</br>spender|json
+balanceOf|Query API|any|any|who|string(like json)
+allowance|Invoke API|any?|any?|owner</br>spender|string(like json)
 </br>
+
+#### example
+```javascript
+    curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" 
+        --data '{"function": "balanceOf", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "1234qwer", "args": ["{\"who\": \"bznt0x69186ddF37cC536605F78A1207f739481a1461e7\"}"]}' 
+        https://testnet-apis.bezant.io/blockchain/v1/bezant-channel/chaincodes/bezant-token/query
+```
 
 ## 응답 코드 정의
 
