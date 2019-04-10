@@ -56,20 +56,18 @@ enrollmentId|string|Y|wallet 주소|"enrollmentId": "bznt0x2Df790d7cEEd72Ec911f8
 
 #### Request example
 ```javascript
-curl -X POST -H "Content-Type: application/json" -H "apikey: e3938427-1e27-3a37-a854-0ac5a40d84a8" --data '{"skey": "1234qwer"}' https://testnet-apis.bezant.io/blockchain/v1/wallet
+curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"skey": "1234qwer"}' https://testnet-apis.bezant.io/blockchain/v1/wallet
 ```
 
 #### Response example
 ```json
 {
   "code":"0000",
-  "message":
-    {
+  "message": {
       "enrollmentID":"bznt0xf6DBE5C95E25793aCaa48314e4cdA1e9a439E291"
-    }
+  }
 }
 ```
-
 </br>
 
 ### 2. Wallet Password 변경 API
@@ -94,6 +92,21 @@ json key|타입|필수 여부|설명|예제
 enrollmentId|string|Y|wallet 주소|"enrollmentId": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
 skey|string|Y|User Secret|"skey": "test1234"
 newSkey|string|Y|User Secret|"newSkey": "newtest1234"
+
+#### Request example
+```javascript
+curl -X PUT -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"address":"bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "1234qwer", "newSkey": "test1234"}' https://testnet-apis.bezant.io/blockchain/v1/wallet/password
+```
+
+#### Response example
+```json
+{
+  "code":"0000",
+  "message": {
+      "enrollmentID":"bznt0xf6DBE5C95E25793aCaa48314e4cdA1e9a439E291"
+  }
+}
+```
 </br>
 
 ### 3. Chaincode Query API
