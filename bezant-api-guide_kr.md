@@ -163,7 +163,6 @@ args|array|Y|function 호출 시 필요한 arguments|"args": ["bznt0x59aDD906d2E
 
 function|사용 API|address|skey|args|타입
 ---|---|---|---|---|---
-init|Invoke API|chaincode owner address|chaincode owner skey|name</br>symbol</br>totalSupply</br>decimals</br>contractType|string(like json)
 transfer|Invoke API|from address|from address skey|to</br>amount|string(like json array)
 transferFrom|Invoke API|invoker address|invoker address skey|from</br>to</br>amount|string(like json)
 approve|Invoke API|wallet owner address|wallet owner address|spender</br>amount|string(like json)
@@ -173,9 +172,6 @@ allowance|Invoke API|requester address|requester skey|owner</br>spender|string(l
 
 #### curl example
 ``` javascript
-// BRC20 - Init
-curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "init", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "test1234", "args": ["{\"name\": \"sample-token\", \"symbol\": \"SAMPLE\", \"totalSupply\": \"10000000\", \"decimals\": 5, \"contractType\": \"BRC20\"}"]}' https://testnet-apis.bezant.io/blockchain/v1/{channelName}/chaincodes/{chaincodeName}/invoke
-
 // BRC20 - Transfer
 curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "transfer", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "test1234", "args": ["[{\"to\": \"bznt0xe8acb79d2847D724fF1aE48055E14CF99D502fe3\", \"amount\": \"10\"}, {\"to\": \"bznt0xB5380818073349b06174a762363A0A2846EE2a42\", \"amount\": \"20\"}]"]}' https://testnet-apis.bezant.io/blockchain/v1/{channelName}/chaincodes/{chaincodeName}/invoke
 
