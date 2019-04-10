@@ -53,6 +53,23 @@ skey|string|Y|User Secret|"skey": "test1234"
 json key|타입|필수 여부|설명|예제
 ---|:---:|:---:|:---:|---
 enrollmentId|string|Y|wallet 주소|"enrollmentId": "bznt0x2Df790d7cEEd72Ec911f878eF85a7c628651D4b1"
+
+#### Request example
+```javascript
+curl -X POST -H "Content-Type: application/json" -H "apikey: e3938427-1e27-3a37-a854-0ac5a40d84a8" --data '{"skey": "1234qwer"}' https://testnet-apis.bezant.io/blockchain/v1/wallet
+```
+
+#### Response example
+```json
+{
+  "code":"0000",
+  "message":
+    {
+      "enrollmentID":"bznt0xf6DBE5C95E25793aCaa48314e4cdA1e9a439E291"
+    }
+}
+```
+
 </br>
 
 ### 2. Wallet Password 변경 API
@@ -140,9 +157,8 @@ approve|Invoke API|wallet owner address|wallet owner address|spender</br>amount|
 totalSupply|Query API|any|any|||
 balanceOf|Query API|any|any|who|string(like json)
 allowance|Invoke API|any?|any?|owner</br>spender|string(like json)
-</br>
 
-#### example
+#### curl example
 ``` javascript
 // BRC20 - BalanceOf
 curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "balanceOf", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "1234qwer", "args": ["{\"who\": \"bznt0x69186ddF37cC536605F78A1207f739481a1461e7\"}"]}' https://testnet-apis.bezant.io/blockchain/v1/bezant-channel/chaincodes/bezant-token/query
