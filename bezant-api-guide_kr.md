@@ -143,10 +143,9 @@ allowance|Invoke API|any?|any?|owner</br>spender|string(like json)
 </br>
 
 #### example
-```javascript
-    curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" 
-        --data '{"function": "balanceOf", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "1234qwer", "args": ["{\"who\": \"bznt0x69186ddF37cC536605F78A1207f739481a1461e7\"}"]}' 
-        https://testnet-apis.bezant.io/blockchain/v1/bezant-channel/chaincodes/bezant-token/query
+``` javascript
+// BRC20 - BalanceOf
+curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX" --data '{"function": "balanceOf", "address": "bznt0x69186ddF37cC536605F78A1207f739481a1461e7", "skey": "1234qwer", "args": ["{\"who\": \"bznt0x69186ddF37cC536605F78A1207f739481a1461e7\"}"]}' https://testnet-apis.bezant.io/blockchain/v1/bezant-channel/chaincodes/bezant-token/query
 ```
 
 ## 응답 코드 정의
