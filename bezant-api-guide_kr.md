@@ -168,7 +168,7 @@ transferFrom|Invoke API|invoker address|invoker address skey|from</br>to</br>amo
 approve|Invoke API|wallet owner address|wallet owner address|spender</br>amount|string(like json)
 totalSupply|Query API|requester address|requester skey|||
 balanceOf|Query API|requester address|requester skey|who|string(like json)
-allowance|Invoke API|requester address|requester skey|owner</br>spender|string(like json)
+allowance|Query API|requester address|requester skey|owner</br>spender|string(like json)
 
 #### curl example
 ``` javascript
