@@ -16,6 +16,7 @@ Header name|Value|Example
 Phase|Endpoint
 :---:|---
 testnet|https://testnet-apis.bezant.io/
+mainnet|https://apis.bezant.io/
 </br>
 
 ## Response format
@@ -192,37 +193,37 @@ curl -X POST -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX
 
 ## Response Code Glossary
 
-http status code|internal code|message| explanation
----|---|---|---
-200|0000| | Normal Code
-500|9999|Internal Server Error.|An unexpected error has happened.
-400|7000|Bad Request. Failed to request validation.|잘못된 요청입니다. 검증을 통과하지 못했습니다.
-400|7001|Bad Request. Apikey does not exist in your request.|잘못된 요청입니다. 요청에 API Key 가 누락되었습니다.
-400|7002|Bad Request. API does not exist.|잘못된 요청입니다. API 가 존재하지 않습니다.
-400|7003|Bad Request. This Method or Protocol is Not Allowed.|잘못된 요청입니다. 요청한 Method 혹은 프로토콜은 허용되지 않습니다.
-400|7004|Resource was not found.|리소스를 찾을 수 없습니다.
-400|7005|ApiKey is not valid or has expired.|API Key 가 유효하지 않거나 파기되었습니다.
-404|7006|Request API Path is unclear.|API 요청 URL 이 정확하지 않습니다. 존재하지 않습니다.
-400|7007|Required Parameter does not exist.|해당 요청에 필수 파라미터가 존재하지 않습니다.
-403|7008|Service Contract does not exist.|서비스 계약 정보가 존재하지 않습니다.
-403|7009|Went over the App Rate Limit. Try again later.|허용 가능한 호출수가 넘었습니다.
-403|7010|IP Address is not permitted. Please check the IP address.|해당 IP 는 허용되지 않습니다. IP 를 체크하세요.
-400|7011|Not Supported Content-Type. For post and put methods, content-type only supports [application/json] or [text/plain].|지원하지 않는 Content-Type 입니다.
-400|7013|Body is not a json format.|Body 포멧이 Json 이 아닙니다.
-502|7100|Internal Server Error. There is no remaining quota.|서버의 호출 용량이 초과하였습니다.
-503|7101|Internal Server Error. Proxy server is exhausted.|서버가 과부하 상태입니다.
-504|7102|Internal Server Error. Outbound Service is unstable.|서비스가 안정적이지 않은 상태입니다.
-503|7103|Went over service Capacity.|Service Capacity 를 넘었습니다.
-408|7104|Request Timeout.|요청에 대해 Timeout 이 발생하였습니다.
-400|2001|InvalidSymmetricKeyException|skey 가 유효하지 않습니다.
-400|2002|Address({info}) is not valid.|유효하지 않은 address 값입니다.
-400|2003|Transaction proposal is not valid.|transaction proposal 이 유효하지 않습니다.
-400|2006|User {id} is not enrolled yet. Please check.|등록되지 않은 되지 않은 address입니다.
-400|2007|OrgName {orgname} is not valid. The orgName does not have permission to call.|잘못된 채널로 요청하였습니다.
-500|2100|Failed to enroll.|Enroll 요청 실패되었습니다.
-500|2101|Failed to send transaction to orderer.|Proposal 성공했으나 Orderer 에 Transaction 요청이 실패되었습니다.
-500|2102|Failed to invoke chaincode.|체인코드에 invoke 가 실패하였습니다.
-500|2103|Failed to query chaincode.|체인코드에 query 가 실패하였습니다.
-500|2104|Can't find chaincode ({ chaincodeName }) Please check.|해당 체인코드를 찾을 수 없습니다.
-500|2105|Can't find channel {channelName}. Please check.|해당 Channel을 찾을 수 없습니다.
+http status code|internal code|message
+---|---|---
+200|0000|Success
+500|9999|Internal Server Error.
+400|7000|Bad Request. Failed to request validation.
+400|7001|Bad Request. Apikey does not exist in your request.
+400|7002|Bad Request. API does not exist.
+400|7003|Bad Request. This Method or Protocol is Not Allowed.
+400|7004|Resource was not found.
+400|7005|ApiKey is not valid or has expired.
+404|7006|Request API Path is unclear.
+400|7007|Required Parameter does not exist.
+403|7008|Service Contract does not exist.
+403|7009|Went over the App Rate Limit. Try again later.
+403|7010|IP Address is not permitted. Please check the IP address.
+400|7011|Not Supported Content-Type. For post and put methods, content-type only supports [application/json] or [text/plain].
+400|7013|Body is not a json format.
+502|7100|Internal Server Error. There is no remaining quota.
+503|7101|Internal Server Error. Proxy server is exhausted.
+504|7102|Internal Server Error. Outbound Service is unstable.
+503|7103|Went over service Capacity.
+408|7104|Request Timeout.
+400|2001|InvalidSymmetricKeyException
+400|2002|Address({info}) is not valid.
+400|2003|Transaction proposal is not valid.
+400|2006|User {id} is not enrolled yet. Please check.
+400|2007|OrgName {orgname} is not valid. The orgName does not have permission to call.
+500|2100|Failed to enroll.
+500|2101|Failed to send transaction to orderer.
+500|2102|Failed to invoke chaincode.
+500|2103|Failed to query chaincode.
+500|2104|Can't find chaincode ({ chaincodeName }) Please check.
+500|2105|Can't find channel {channelName}. Please check.
 
