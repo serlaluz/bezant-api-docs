@@ -160,6 +160,34 @@ skey|string|Y|User Secret|"skey": "test1234"
 args|array|Y|function 호출 시 필요한 arguments|"args": ["bznt0x59aDD906d2EDDd80528cae84c292EC0B62601F13", "10.0"]
 </br>
 
+### 5. Check transactions API
+
+* 기본 정보
+
+구분| |
+:---:|---
+URL Path|/scan/v1/{channelName}/transactions
+Method|POST
+
+* Header 정보
+
+구분| |
+:---:|:---:
+Content-Type|application/json
+
+* Request Query Parameter
+
+parameter name|타입|필수 여부|설명|예제
+---|:---:|:---:|---|---
+txIds|string|Y|조회하고자 하는 transaction ids|txIds=abc,def,erg
+</br>
+
+#### Request example
+```javascript
+curl -X GET -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX"  https://xxxx-apis.bezant.io/scan/v1/bezant-channel/transactions?txIds=8dc64da1afdbe8aad5cb0bb9fdb3632d04fd152b96caf0fd95bf11df4705a56c
+```
+</br>
+
 ## BRC20 토큰형 모델의 스펙 정의
 
 function|사용 API|address|skey|args|타입
