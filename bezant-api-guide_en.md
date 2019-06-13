@@ -161,6 +161,34 @@ skey|string|Y|User Secret|"skey": "test1234"
 args|array|Y|These are the required arguments to call a function|"args": ["bznt0x59aDD906d2EDDd80528cae84c292EC0B62601F13", "10.0"]
 </br>
 
+### 5. Check Transactions API
+
+* General Information
+
+Category| |
+:---:|---
+URL Path|/scan/v1/{channelName}/transactions
+Method|POST
+
+* Header Information
+
+Category| |
+:---:|:---:
+Content-Type|application/json
+
+* Request Query Parameter
+
+Parameter Name|Type|Required (Y/N)|Explanation|Example
+---|:---:|:---:|---|---
+txIds|string|Y|Queried Transaction ID|txIds=abc,def,erg
+</br>
+
+#### Request example
+```javascript
+curl -X GET -H "Content-Type: application/json" -H "apikey: XXXX-XXXX-XXXX-XXXX"  https://xxxx-apis.bezant.io/scan/v1/bezant-channel/transactions?txIds=8dc64da1afdbe8aad5cb0bb9fdb3632d04fd152b96caf0fd95bf11df4705a56c
+```
+</br>
+
 ## BRC20 Token Model Specifications
 
 function|Used API|address|skey|args|Type
